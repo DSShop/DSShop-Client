@@ -3,7 +3,7 @@
 
 <h1 align="center"><b>Info</b></h1>
 <p align="center">This is the DSShop Client you will install on your 3DS through FBI.<br>
-With that comes also a complete open source repository.</p>
+With that comes also a complete open source repository for interested people.</p>
 
 <h1 align="center"><b>Credits</b></h1>
 <p align="center">DSShop Team, devkitARM, Citro2D, libctru and Nintendo(not affiliated with this project).</p>
