@@ -1,5 +1,6 @@
 <h1 align="center"><br><img src="https://cdn.discordapp.com/attachments/1102974988346208327/1150783804420669552/Untitled215_20230604144110.png" height="200" width="400"><br><b>DSShop Client</b></h1>
-<p align="center">A client for downloading DS games from the DSShop server.</p>
+<p align="center">A client for downloading DS games from the DSShop server.<br>
+Available for DSi(XL) and (New)3DS/2DS(XL).</p>
 
 <h1 align="center"><b>Info</b></h1>
 <p align="center">This is the DSShop Client you will install on your 3DS through FBI.<br>
