@@ -18,10 +18,9 @@ typedef struct {
 
 static C2D_SpriteSheet spriteSheet;
 
+Sprite* sprite = &sprite[1];
+
 static void initSprites() {
-
-        Sprite* sprite = &sprite[1];
-
 		// Sets the image and position
 		C2D_SpriteFromSheet(&sprite->spr, spriteSheet, 1);
 		C2D_SpriteSetPos(&sprite->spr, 0, 0);
