@@ -10,6 +10,8 @@ For the download click this link https://github.com/DSShop/DSShop-Client/release
 <h1 align="center"><b>Compiling Info</b></h1>
 <p align="center">For compiling the DSShop Client on Windows you will need to install https://devkitpro.org/.<br>
 Make sure you pick 3DS Development when using the graphical installer on Windows.<br>
+If you're on Windows go to C:\devkitPro\msys2, then open msys2.exe, write `pacman -Sys curl` and then `pacman -Sy 3ds-curl`<br>
+Go back to your DSShop directory<br>
 Open Command Prompt and type "cd [Insert the code location]" then type "make".<br>
 Now you have the .3dsx version of the DSShop.<br></p>
 
