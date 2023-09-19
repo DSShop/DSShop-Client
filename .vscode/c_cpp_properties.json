@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/devkitPro/libctru/include/**",
+                "C:/devkitPro/portlibs/3ds/include",
                 "C:/devkitPro/devkitARM/include/**",
                 "C:/devkitPro/devkitARM/arm-none-eabi/include/**"
             ],
