@@ -3,16 +3,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "functions.cpp"
 
 #include <3ds.h>
+#include <citro3d.h>
 #include <citro2d.h>
+#include <curl/curl.h> // External lib
 
-#define MAX_SPRITES   50;
-#define SCREEN_WIDTH  360;
-#define SCREEN_HEIGHT 240;
-
-int index;
+#define MAX_SPRITES   50
+#define SCREEN_WIDTH  400
+#define SCREEN_HEIGHT 240
 
 typedef struct {
 	C2D_Sprite spr;
@@ -20,17 +19,24 @@ typedef struct {
 } Sprite;
 
 static C2D_SpriteSheet spriteSheet;
+static Sprite sprites[MAX_SPRITES];
 
-Sprite* sprite = &sprite[1];
+// Sprite* sprite = &sprite[1];
 
 static void initSprites() {
+	size_t numImages = C2D_SpriteSheetCount(spriteSheet);
+	srand(time(NULL));
+	for (size_t i = 0; i < MAX_SPRITES; i++)
+	{
+		Sprite* sprite = &sprites[i];
 		// Sets the image and position
-		C2D_SpriteFromSheet(&sprite->spr, spriteSheet, index);
+		C2D_SpriteFromSheet(&sprite->spr, spriteSheet, rand() % numImages);
+		C2D_SpriteSetCenter(&sprite->spr, 0.5f, 0.5f);
 		C2D_SpriteSetPos(&sprite->spr, 0, 0);
-};
+	}
+}
 
 int main(int argc, char* argv[]) {
-
 	romfsInit();
 	gfxInitDefault();
 	C3D_Init(C3D_DEFAULT_CMDBUF_SIZE);
@@ -49,7 +55,8 @@ int main(int argc, char* argv[]) {
 	initSprites();
 
 	// Main loop
-	while (aptMainLoop()) {
+	while (aptMainLoop())
+	{
 		hidScanInput();
 
 		// Respond to user input
@@ -61,9 +68,9 @@ int main(int argc, char* argv[]) {
 		C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
 		C2D_TargetClear(bottom, C2D_Color32f(0.0f, 0.0f, 0.0f, 1.0f));
 		C2D_SceneBegin(bottom);
-		C2D_DrawSprite(&sprite[1].spr);
+		C2D_DrawSprite(&sprites[1].spr);
 		C3D_FrameEnd(0);
-	};
+	}
 
 	// Delete graphics
 	C2D_SpriteSheetFree(spriteSheet);
@@ -74,4 +81,4 @@ int main(int argc, char* argv[]) {
 	gfxExit();
 	romfsExit();
 	return 0;
-};
+}
