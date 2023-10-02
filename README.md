@@ -8,7 +8,7 @@ With that comes also a complete open source repository for interested people.<br
 For the download click this link https://github.com/DSShop/DSShop-Client/releases. </p>
 
 <h1 align="center"><b>Installation</b></h1>
-<p>Either download DSShop from GitHub or scan the QR Code found on the website/Discord Server or GitHub.<br>
+<p align="center">Either download DSShop from GitHub or scan the QR Code found on the website/Discord Server or GitHub.<br>
 When downloading the .cia file from GitHub, insert your (micro)SD Card into a device which can read and write to it.<br>
 Afterwards put the .cia file into cias folder(if you don't have one, create one) also make sure to have FBI installed on your 3DS.<br>
 Finally insert your (micro)SD Card back into your 3DS, open FBI, go to SD, then cias, select DSShop.cia press A and then press A again.<br>
