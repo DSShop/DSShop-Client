@@ -18,4 +18,4 @@ Now you have the .3dsx version of the DSShop.<br>
 For .cia compilation is makerom required.</p>
 
 <h1 align="center"><b>Credits</b></h1>
-<p align="center">DSShop Team for the development, devkitPro for the devkitARM toolchain and 3DS library and Nintendo(not affiliated with this project).</p>
+<p align="center">DSShop Team for the development, devkitPro for the devkitARM toolchains and 3DS libraries and Nintendo(not affiliated with this project).</p>
