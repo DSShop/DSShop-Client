@@ -10,7 +10,7 @@
 #include <curl/curl.h> // External lib
 
 #define MAX_SPRITES   50
-#define SCREEN_WIDTH  400
+#define SCREEN_WIDTH  360
 #define SCREEN_HEIGHT 240
 
 typedef struct {
