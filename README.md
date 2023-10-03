@@ -1,4 +1,4 @@
-<h1 align="center"><br><img src="https://cdn.discordapp.com/attachments/1102974988346208327/1150783804420669552/Untitled215_20230604144110.png" height="200" width="400"><br><b>DSShop Client</b></h1>
+<h1 align="center"><br><img src="https://cdn.discordapp.com/attachments/1102583029874045069/1158784365090832475/dsshop_logo.png?ex=651d8189&is=651c3009&hm=d2e24d5e7db28ccdcd28a3c2700c0584cff57408f0c8a2b35f821abc34563f2d&" height="100" width="400"><br><b>DSShop Client</b></h1>
 <p align="center">A client for downloading DS games from the DSShop server.<br>
 Available for (New)3DS/2DS(XL).</p>
 
