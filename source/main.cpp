@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include <3ds.h>
-#include "include/graphics.h"
+#include <graphics.h>
+#include <audio.h>
 
 int main() {
 	// Initialize stuff
