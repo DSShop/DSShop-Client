@@ -22,7 +22,6 @@ static C2D_SpriteSheet spriteSheet;
 static Sprite sprites[MAX_SPRITES];
 
 void initSprite(int spriteIndex, int x, int y) {
-    size_t numSprite = C2D_SpriteSheetCount(spriteSheet); // Get the amount of sprites from the spriteSheet
     Sprite* spriteSelect = &sprites[spriteIndex]; // Select sprite to render
 
     C2D_SpriteFromSheet(&spriteSelect->sprite, spriteSheet, spriteIndex); // Renders sprite from spriteSheet
