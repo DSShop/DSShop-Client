@@ -1,3 +1,4 @@
+// Standard, libctru and custom includes
 #include <iostream>
 #include <string>
 #include <3ds.h>
@@ -13,7 +14,7 @@ int main() {
 	C2D_Prepare();
 
 	// Create Render Targets
-	//C3D_RenderTarget* topScreen = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
+	C3D_RenderTarget* topScreen = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
 	C3D_RenderTarget* bottomScreen = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);
 
 	// Load spriteSheet and crash the app if it's being found
@@ -21,20 +22,28 @@ int main() {
 	if (!spriteSheet) svcBreak(USERBREAK_PANIC);
 
 	// Main Loop
-	while(aptMainLoop) {
+	while(aptMainLoop()) {
 		// Allow inputs
 		hidScanInput();
 
+		// Respond to user input
+		u32 kDown = hidKeysDown();
+		if (kDown & KEY_START) {
+			break; // Break the app in order to return to the Homebrew Launcher
+		};
+
 		// Initialize sprites
-		initSprite(1, 0, 0);
+		initSprite(0, 160, 120);
+		initSprite(3, 200, 120);
 
 		C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
-		//C2D_TargetClear(topScreen, C2D_Color32f(0.0f, 0.0f, 0.0f, 1.0f));
+		C2D_TargetClear(topScreen, C2D_Color32f(0.0f, 0.0f, 0.0f, 1.0f));
 		C2D_TargetClear(bottomScreen, C2D_Color32f(0.0f, 0.0f, 0.0f, 1.0f));
-		// C2D_SceneBegin(topScreen);
+		C2D_SceneBegin(topScreen);
+		C2D_DrawSprite(&sprites[3].sprite);
 		C2D_SceneBegin(bottomScreen);
+		C2D_DrawSprite(&sprites[0].sprite);
 		// Insert functions here
-		C2D_DrawSprite(&sprites[1].sprite);
 		C3D_FrameEnd(0);
 	};
 
