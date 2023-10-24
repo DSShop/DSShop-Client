@@ -19,3 +19,4 @@ For .cia compilation is makerom required.</p>
 
 <h1 align="center"><b>Credits</b></h1>
 <p align="center">DSShop Team for the development, devkitPro for the devkitARM toolchains and 3DS libraries and Nintendo(not affiliated with this project).</p>
+HELLOLO
