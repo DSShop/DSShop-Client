@@ -25,6 +25,7 @@ void initSprite(int spriteIndex, int x, int y) {
     Sprite* spriteSelect = &sprites[spriteIndex]; // Select sprite to render
 
     C2D_SpriteFromSheet(&spriteSelect->sprite, spriteSheet, spriteIndex); // Renders sprite from spriteSheet
+    C2D_SpriteSetCenter(&spriteSelect->sprite, 0.5f, 0.5f); // Sets the sprite center
     C2D_SpriteSetPos(&spriteSelect->sprite, x, y); // Sets the position of the sprite to the center
 };
 #endif
