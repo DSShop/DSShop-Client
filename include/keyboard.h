@@ -5,5 +5,5 @@
 #include <iostream>
 #include <string>
 
-std::string seach;
+std::string search;
 #endif
