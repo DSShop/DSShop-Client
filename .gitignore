@@ -1,0 +1,6 @@
+*Tools and Clutter/
+.vscode/
+build/
+makerom.exe
+Makefile
+DSShop.lst

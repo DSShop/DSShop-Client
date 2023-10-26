@@ -3,5 +3,6 @@
 #include <inttypes.h>
 #include <stdio.h>
 #include <3ds.h>
-#include "forwarder.cpp"
+#include <client.h>
+#include <keyboard.h>
 
